@@ -6,7 +6,7 @@ prepare_env() {
   mkdir -p download
 
   # updatable part
-  CLANG_URL=https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r563880.tar.gz
+  CLANG_URL=https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/0998f421320ae02fddabec8a78b91bf7620159f6/clang-r563880.tar.gz
   AK3_VERSION=db90e19aae369c9c10b956a08003cee3958d50a0
 
   # set local shell variables
