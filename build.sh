@@ -21,7 +21,6 @@ prepare_env() {
     CROSS_COMPILE_ARM32=arm-linux-androideabi-
     CROSS_COMPILE_COMPAT=arm-linux-androideabi-
     CC="ccache clang"
-    LD=ld.lld
     AS=llvm-as
     AR=llvm-ar
     NM=llvm-nm
