@@ -19,7 +19,7 @@ jobs:
     container:
      image: pexcn/docker-images:bookworm-android
     env:
-      TZ: Asia/Taipei
+      TZ: Asia/Jakarta
       BUILD_CONFIG: ${{ matrix.CONFIG }}
       DEVICE_CODENAME: mido
     strategy:
