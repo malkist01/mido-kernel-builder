@@ -50,7 +50,7 @@ prepare_env() {
   export ARCH=arm64
   export SUBARCH=arm64
   export KBUILD_BUILD_USER=${GITHUB_REPOSITORY_OWNER:-pexcn}
-  export KBUILD_BUILD_HOST=buildbot
+  export KBUILD_BUILD_HOST=android
   export KBUILD_COMPILER_STRING="$(clang --version | head -1 | sed 's/ (https.*//')"
   export KBUILD_LINKER_STRING="$(ld.lld --version | head -1 | sed 's/ (compatible.*//')"
 }
@@ -90,8 +90,7 @@ add_kernelsu() {
   cd build/kernel
 
   # integrate kernelsu-next
-  curl -sSL "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s v1.0.6
-
+  curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s susfs-{{branch}}
   # prepare .config
   make "${MAKE_FLAGS[@]}" $KERNEL_CONFIG
 
